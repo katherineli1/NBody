@@ -1,3 +1,6 @@
+import java.io.*;
+import java.util.*;
+import java.io.FileNotFoundException;
 
 public class NBody {
 	
@@ -22,4 +25,29 @@ public class NBody {
 		                      planets[i].myMass, planets[i].myFileName);	
 		}
 	}
+	
+	public static double readRadius(String fname) {
+		Scanner scan;
+		try {
+			scan = new Scanner(new File(fname));
+		} catch (FileNotFoundException e) {
+            return 0;
+        }
+		scan.nextDouble();
+		double answer = scan.nextDouble();
+		scan.close();
+		return answer;
+	}
+	
+	public static Planet[] readPlanets(String fname) {
+		Scanner scan;
+		try {
+			scan = new Scanner(new File(fname));
+		} catch (FileNotFoundException e) {
+            return 0;
+        }
+		scan.useDelimiter("\\Z");
+		
+	}
+	
 }
