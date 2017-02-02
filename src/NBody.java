@@ -4,8 +4,8 @@ import java.util.*;
 public class NBody {
 	
 	public static void main(String[] args){
-		double T = 157788000.0;
-		double dt = 25000.0;
+		double T = 157788000.0; //2000000; //1000000.0;
+		double dt = 250000.0;
 		String pfile = "data/planets.txt";
 		
 		if (args.length > 2) {
@@ -75,7 +75,7 @@ public class NBody {
 		Planet[] planets = new Planet[n];
 		
 		for (int i = 0; i < n; i++) {
-			Planet p = new Planet(scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), "images/" + scan.next());
+			Planet p = new Planet(scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), scan.nextDouble(), scan.next());
 			planets[i] = p;
 		}
 		scan.close();

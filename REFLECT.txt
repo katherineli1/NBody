@@ -1,10 +1,33 @@
 Name: Katherine Li
 NetID: kl261
 
-Hours Spent: Give the date you started the assignment (January 27, 2017), the date you completed the assignment, and an estimate of the number of hours you worked on it
-Consulted with: A list of the students, TAs, and professors with whom you consulted on the assignment. Since assignments are to be your own work, you should keep track of anyone with whom you have had a significant conversation about a program. You are welcome to talk with the course staff about the assignment, and to other students about broad ideas and concepts. If you did not consult with anyone, you must explicitly state that fact.
-Resources used: Note any books, papers, or online resources that you used in developing your solution. If you did not use any outside resources, you must explicitly state that fact.
-Impressions: You may include your impressions of the assignment to help the course staff improve it in the future.
+Hours Spent: January 27, 2017, February 2, 2017, ~5 hours
+
+Consulted with: Peyton Schafer pas44
+
+Resources used: Did not use outside resources (other than java documentation and course website)
+
+Impressions: Great assignment for introduction to coding in java!
+
 Answers to questions:
-What is the final position of the planets (using the planets.txt file) after 1,000,000 and 2,000,000 seconds with a timestep of 25,000?
-For what values of timeStep, does the simulation no longer behave correctly? Explain why.
+1. What is the final position of the planets (using the planets.txt file) after 1,000,000 and 2,000,000 seconds with a timestep of 25,000?
+1,000,000 seconds:
+Earth: (1.4657e+11, 2.9604e+10)
+Mars: (2.2659e+11, 2.4055e+10)
+Mercury: (3.8636e+10, 4.2569e+10)
+Sun: (2.6827e+04, 2.9792e+03)
+Venus: (1.0244e+11, 3.4391e+10)
+
+2,000,000 seconds:
+Earth: (1.3774e+11, 5.8036e+10)
+Mars: (2.2275e+11, 4.7841e+10)
+Mercury: (-5.9865e+09, 5.7090e+10)
+Sun: (1.0223e+05, 2.3000e+04)
+Venus: (8.5997e+10, 6.5196e+10)
+
+2. For what values of timeStep, does the simulation no longer behave correctly? Explain why.
+The simulation does not work correctly for values of timeStep above 1000000. By the end of the simulation (aka when time = T), the planets
+are flying off of the bottom of the screen and not staying in their orbits. This is because as the timeStep gets larger, the values for
+acceleration and velocity of the planets between each discrete time step are much larger. Conceptually this is because the forces have much 
+more time to act on the planets and thus can distort the path of the planets more until the planets are completely pulled out of their orbits.
+
