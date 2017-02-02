@@ -74,4 +74,8 @@ public class Planet {
 		this.myXPos = this.myXPos + this.myXVel * time;
 		this.myYPos = this.myYPos + this.myYVel * time;
 	}
+	
+	public void draw() {
+		StdDraw.picture(myXPos, myYPos, myFileName);
+	}
 }
